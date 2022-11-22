@@ -7,12 +7,13 @@
     <title>Administración</title>
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="stylesheet" href="/styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="container" id="contenedor_principal">
+    <div class="container-xl" id="contenedor_principal">
         <div class="row">
             <div class="col">
                 <h1>Administración de página</h1>
@@ -50,7 +51,7 @@
                     type="button"
                     class="btn btn-info"
                     data-bs-toggle="modal"
-                    data-bs-target="#myModal"
+                    data-bs-target="#changingModal"
                     id="newProductBtn"
                     onclick="abrirModal()"
                 >
@@ -59,25 +60,24 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="table-responsive row">
             <div class="col">
-                <table class="table table-dark table-striped">
-                    <thead class="table-dark">
+                <table class="table table-dark table-striped table align-middle">
+                    <thead class="table-dark songHeadTable">
                         <tr>
-                            <th scope="col">Imagen</th>
-                            <th scope="col">Titulo</th>
-                            <th scope="col" class="text-center">Artista</th>
-                            <th></th>
+                            <th scope="col" class="text-center col-3 col-md-4">Imagen de disco</th>
+                            <th scope="col" class="text-center col-6 col-md-4">Titulo</th>
+                            <th scope="col" class="text-center col-3 col-md-4">Artista</th>
                         </tr>
                     </thead>
-                    <tbody id="bodyTable"></tbody>
+                    <tbody class="text-center songContainerBody" id="bodyTable"></tbody>
                 </table>
             </div>
         </div>
     </div>
 
     <!-- Button trigger modal -->
-		<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal fade" id="changingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -88,18 +88,7 @@
 					</div>
 					<form id="formCanciones">
 						<div class="modal-body" id="bodyModificaModal">
-                            <div class="form-group">
-                                <label for="titulo">Titulo de canción</label>
-                                <input type="text" class="form-control" id="titulo" value="" autocomplete="off">
-                            </div>
-                            <div class="form-group">
-                                <label for="interprete">Nombre de artista</label>
-                                <input type="text" class="form-control" id="interprete" value="" autocomplete="off">
-                            </div>
-                            <div class="form-group">
-                                <label for="discImg">Imagen de disco</label>
-                                <input type="text" class="form-control" id="discImg" value="" autocomplete="off">
-                            </div>
+                            
                         </div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -124,3 +113,4 @@
 <script src="/js/admin.js"></script>
 </body>
 </html>
+
