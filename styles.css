@@ -20,4 +20,161 @@
     
 }
 
+ /* INICIO error 404  */
+ body {
+    background: rgb(28, 27, 51) !important;
+    background: linear-gradient(rgb(0, 0, 0), rgb(87, 87, 87), rgba(149, 149, 234, 0.858));
+    font-family: 'Times New Roman', Times, serif;
+    
+}
 
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    
+    margin: auto;
+}
+
+.bg_animate{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #a9b2b8, #505BDA);
+    position: relative;
+    overflow: hidden;
+}
+
+.header_nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.banner_title h2{
+    color: aliceblue;
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 0px;
+}
+.banner_title .sacame{
+    color: antiquewhite;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    background: #005c98;
+    padding: 20px;
+}
+
+.conten__img{
+    animation: movimiento 2.5s linear infinite;
+}
+
+.conten__img img{
+    width: 600px;
+    display: block;
+    margin: 20%;
+}
+
+/* burbujas*/
+
+.burbuja{
+    
+    border-radius: 50%;
+    background: azure;
+    opacity: .3;
+
+    position: absolute;
+    bottom: -150;
+    
+
+    animation: burbujas 3s linear infinite;
+}
+
+.burbuja:nth-child(1){
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(2){
+    width: 90px;
+    height: 90px;
+    left: 8%;
+    animation-duration: 3.1s;
+    animation-delay: 4.5s;
+}
+.burbuja:nth-child(3){
+    width: 70px;
+    height: 70px;
+    left: 19%;
+    animation-duration: 3s;
+    animation-delay: 4.4s;
+}
+.burbuja:nth-child(4){
+    width: 60px;
+    height: 60px;
+    left: 52%;
+    animation-duration: 3s;
+    animation-delay: 4s;
+}
+.burbuja:nth-child(5){
+    width: 20px;
+    height: 20px;
+    left: 25%;
+    animation-duration: 4s;
+    animation-delay: 3s;
+}
+.burbuja:nth-child(6){
+    width: 50px;
+    height: 50px;
+    left: 49%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}
+.burbuja:nth-child(7){
+    width: 30px;
+    height: 30px;
+    left: 29%;
+    animation-duration: 3.5s;
+    animation-delay: 2.7s;
+}
+
+
+@keyframes burbujas {
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    30%{
+        transform: translateX(30px);
+    }
+    50%{
+        opacity: .4;
+    }
+    100%{
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
+
+@keyframes movimiento{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+/* FIN error 404  */
