@@ -1,27 +1,42 @@
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 10px;
+    }
+    
     .songHeadTable tr :first-child{
         display: none;
     }
-
+     
     .songContainerBody {
-        display: block
-    }
-
-    .songContainerBody tr {
-        flex-grow: 1;
-    }
+        position: absolute;    
+       }
     
-    .songContainerBody th {
-        /* display: flex; */
-        position: absolute;
-        top: 50%;
+    .songContainerBody tr th {
+        position: relative;
+        
+        
     }
 
+    
+ 
+    
+   
+
+   
+
+   
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
     
 }
 
  /* INICIO error 404  */
- body {
+ /* body {
     background: rgb(28, 27, 51) !important;
     background: linear-gradient(rgb(0, 0, 0), rgb(87, 87, 87), rgba(149, 149, 234, 0.858));
     font-family: 'Times New Roman', Times, serif;
@@ -80,11 +95,11 @@
     width: 600px;
     display: block;
     margin: 20%;
-}
+} */
 
 /* burbujas*/
 
-.burbuja{
+/* .burbuja{
     
     border-radius: 50%;
     background: azure;
@@ -176,5 +191,5 @@
     100%{
         transform: translateY(0);
     }
-}
+} */
 /* FIN error 404  */

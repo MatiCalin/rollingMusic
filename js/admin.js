@@ -43,9 +43,9 @@ class Cancion {
         canciones.forEach((songs) => {
             let tr = document.createElement("tr");
             tr.innerHTML = `
-                <th scope="row">${songs.imagen}</th>
-                <td>${songs.titulo}</td>
-                <td>${songs.interprete}</td>
+                <th scope="row" class="text-center"><img src="${songs.imagen}" alt="${songs.titulo}"></th>
+                <td class="text-center">${songs.titulo}</td>
+                <td class="text-center">${songs.interprete}</td>
                 <div>
                 <a href="#" class="btn btn-warning" onclick="modificarSongs(${songs.codigo})"><i class="fa-solid fa-user-pen"></i></a> 
             <a href="#" class="btn btn-danger" onclick="borrarSongs(${songs.codigo})"><i class="fa-solid fa-trash-can"></i></a>
