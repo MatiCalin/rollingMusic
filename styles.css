@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,400&display=swap');
+
 @media only screen and (max-width: 600px) {
     html {
         font-size: 10px;
@@ -17,13 +19,6 @@
         
     }
 
-    
- 
-    
-   
-
-   
-
    
     
 }
@@ -32,7 +27,42 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    font-family: 'Lato', sans-serif;
     
+}
+
+h1{
+    font-weight: 700;
+}
+
+h3{
+    font-weight: 300;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.btnContainer {
+    position: relative; 
+  
+}
+
+.addBtn {    
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    margin: -1.6rem 0 0 -1.6rem
+    
+}
+
+.fontBtn {
+    font-weight: 300;
+    font-size: large;
+}
+
+.songData {
+    font-weight: 400;
+    font-size: 1.5rem;
 }
 
  /* INICIO error 404  */

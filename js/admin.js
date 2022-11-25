@@ -44,11 +44,11 @@ class Cancion {
             let tr = document.createElement("tr");
             tr.innerHTML = `
                 <th scope="row" class="text-center"><img src="${songs.imagen}" alt="${songs.titulo}"></th>
-                <td class="text-center">${songs.titulo}</td>
-                <td class="text-center">${songs.interprete}</td>
+                <td class="text-center songData">${songs.titulo}</td>
+                <td class="text-center songData">${songs.interprete}</td>
                 <div>
-                <a href="#" class="btn btn-warning" onclick="modificarSongs(${songs.codigo})"><i class="fa-solid fa-user-pen"></i></a> 
-            <a href="#" class="btn btn-danger" onclick="borrarSongs(${songs.codigo})"><i class="fa-solid fa-trash-can"></i></a>
+                <a href="#" class="btn btn-warning my-1" onclick="modificarSongs(${songs.codigo})"><i class="fa-solid fa-user-pen"></i></a> 
+            <a href="#" class="btn btn-danger my-1 px-3" onclick="borrarSongs(${songs.codigo})"><i class="fa-solid fa-trash-can"></i></a>
                 </div>
                 
             `;
@@ -66,16 +66,16 @@ class Cancion {
             content.innerHTML = `
             <div class="form-group">
                                 <label for="titulo">Titulo de canción</label>
-                                <input type="text" class="form-control" id="titulo" value="" autocomplete="off">
+                                <input type="text" class="form-control my-2" id="titulo" value="" autocomplete="off">
                             </div>
                             
                             <div class="form-group">
                                 <label for="interprete">Nombre de artista</label>
-                                <input type="text" class="form-control" id="interprete" value="" autocomplete="off">
+                                <input type="text" class="form-control my-2" id="interprete" value="" autocomplete="off">
                             </div>
                             <div class="form-group">
                                 <label for="discImg">Imagen de disco</label>
-                                <input type="text" class="form-control" id="discImg" value="" autocomplete="off">
+                                <input type="text" class="form-control my-2" id="discImg" value="" autocomplete="off">
                             </div>
                             
                         `;
