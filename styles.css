@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,400&display=swap');
 
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Lato', sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://previews.123rf.com/images/topform8/topform81407/topform8140700094/29786057-m%C3%BAsica-sin-fisuras-vector-de-fondo-con-los-iconos-en-el-estilo-de-dibujo.jpg);
+    
+}
+
 @media only screen and (max-width: 600px) {
     html {
         font-size: 10px;
@@ -8,35 +17,101 @@
     .songHeadTable tr :first-child{
         display: none;
     }
-     
-    .songContainerBody {
-        position: absolute;    
-       }
-    
-    .songContainerBody tr th {
-        position: relative;
-        
+
+    .songContainerBody tr th {   
+        display: none;
+    }
+
+    .btnContainer {
+        position: relative; 
+        top: -10px;
+        right: 20px;
+    }
+
+    .btnContainer button {
+        width: auto;
+        height: auto;
+        font-weight: bold;
+        font-size: small;
+        align-items: center;
+    }  
+
+    .collapseBtn {
+        display: inline-block;
         
     }
 
-   
+    .collapseBtn button {
+        display: none;
+    }
+
+    .collapseBtn a {
+        color: white;
+        background-color: rgba(14, 98, 14, 0.979);
+        
+    }
+
+    
+     
+ 
+}
+
+@media only screen and (min-width: 768px) {
+    
+/*DESPLEGABLE */
+.collapseBtn {
+    position: relative;
+    right: 70px;
+}
+
+.collapseBtn button{
+    background-color: rgb(85, 246, 85);
+    color: black;
+    width: 2rem;
+    height: 5rem;
+    border-radius: 1rem;
+    position: relative; 
+    left: 40px; 
+    bottom: 50px;  
+}
+
+.collapseBtn a {
+    color: white;
+    background-color: rgba(14, 98, 14, 0.979);
+    position: relative;
+    top: 35px;
+    visibility: hidden;
+}
+
+.collapseBtn a:hover {
+    color: black;
+    background: white;
+}
+
+.collapseBtn:hover {
+    transform: translateX(60px);
+    transition: 1s ease-in-out;   
+}
+
+.collapseBtn:hover a {
+    visibility: visible;
     
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    font-family: 'Lato', sans-serif;
-    
+/* FIN DESPLEGABLE */
 }
+
 
 h1{
+    color: rgb(255, 255, 255);
     font-weight: 700;
+    text-shadow: 10px 0px 10px rgb(0, 0, 0);
 }
 
 h3{
-    font-weight: 300;
+    color: rgb(255, 255, 255);
+    text-shadow: 10px 0px 10px rgb(0, 0, 0);
+    font-weight: bold;
     font-size: 2rem;
     text-align: center;
     padding: 1rem;
@@ -47,31 +122,40 @@ h3{
   
 }
 
-.addBtn {    
+.btnContainer button {
+    background-color: rgba(14, 98, 14, 0.979);   
     position: absolute;
     top: 50%; 
     left: 50%;
     margin: -1.6rem 0 0 -1.6rem
-    
+}
+
+.btnContainer button:hover {
+    background-color: rgb(85, 246, 85);
 }
 
 .fontBtn {
-    font-weight: 300;
+    font-weight: bold;
     font-size: large;
 }
 
+
 .songData {
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 
- /* INICIO error 404  */
- /* body {
-    background: rgb(28, 27, 51) !important;
-    background: linear-gradient(rgb(0, 0, 0), rgb(87, 87, 87), rgba(149, 149, 234, 0.858));
-    font-family: 'Times New Roman', Times, serif;
-    
+.tableImg {
+    height: 10rem;
+    object-fit: cover;
+    filter: drop-shadow(0 0 0.5rem rgb(85, 246, 85));
 }
+
+
+
+
+ /* INICIO error 404  */
+ /* 
 
 .contenedor{
     width: 90%;

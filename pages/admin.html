@@ -1,116 +1,140 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Administración</title>
     <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-<link rel="stylesheet" href="/styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <div class="container-xl" id="contenedor_principal">
-        <div class="row">
-            <div class="col mt-4">
-                <h1>Administración de página</h1>
-            </div>
+      <div class="row">
+        <div class="col mt-4">
+          <h1>Administración de página</h1>
         </div>
-        <div class="row">
-            <div class="col">
-                <h3>Usuarios registrados</h3>
-            </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h3>Usuarios registrados</h3>
         </div>
-        <div class="row">
-            <div class="col">
-                <table class="table table-dark table-striped">
-                    <thead class="table-dark">
-                        <tr>
-                            <th scope="col p-3">Usuario</th>
-                            <th scope="col p-3">Nombre</th>
-                            <th scope="col p-3">Email</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody id="tableUser">
+      </div>
+      <div class="row">
+        <div class="col">
+          <table class="table table-dark table-striped">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col p-3">Usuario</th>
+                <th scope="col p-3">Nombre</th>
+                <th scope="col p-3">Email</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="tableUser"></tbody>
+          </table>
+        </div>
+      </div>
 
-                    </tbody>
-                </table>
-            </div>
+      <div class="row mt-2">
+        <div class="col">
+          <h3>Administración de contenido</h3>
         </div>
+        <div class="col mt-2 btnContainer">
+          <button
+            type="button"
+            class="btn text-light py-2 fontBtn"
+            data-bs-toggle="modal"
+            data-bs-target="#changingModal"
+            id="newProductBtn"
+            onclick="abrirModal()"
+          >
+            Cargar nuevo contenido
+          </button>
+        </div>
+      </div>
 
-        <div class="row mt-2">
-            <div class="col">
-                <h3>Administracion de contenido</h3>
-            </div>
-            <div class="col mt-2 btnContainer">
-                <button
-                    type="button"
-                    class="btn btn-info py-2 addBtn fontBtn"
-                    data-bs-toggle="modal"
-                    data-bs-target="#changingModal"
-                    id="newProductBtn"
-                    onclick="abrirModal()"
-                >
-                    Cargar nuevo contenido
-                </button>
-            </div>
+      <div class="table-responsive row">
+        <div class="col">
+          <table class="table table-dark table-striped table align-middle">
+            <thead class="table-dark songHeadTable">
+              <tr>
+                <th scope="col" class="text-center col-md-4 p-3">
+                  Imagen de disco
+                </th>
+                <th scope="col" class="text-center col-6 col-md-4 p-3">
+                  Titulo
+                </th>
+                <th scope="col" class="text-center col-6 col-md-4 p-3">
+                  Artista
+                </th>
+              </tr>
+            </thead>
+            <tbody class="text-center songContainerBody" id="bodyTable"></tbody>
+          </table>
         </div>
-
-        <div class="table-responsive row">
-            <div class="col">
-                <table class="table table-dark table-striped table align-middle">
-                    <thead class="table-dark songHeadTable">
-                        <tr>
-                            <th scope="col" class="text-center col-md-4 p-3">Imagen de disco</th>
-                            <th scope="col" class="text-center col-6 col-md-4 p-3">Titulo</th>
-                            <th scope="col" class="text-center col-6 col-md-4 p-3">Artista</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-center songContainerBody" id="bodyTable"></tbody>
-                </table>
-            </div>
-        </div>
+      </div>
     </div>
 
     <!-- Button trigger modal -->
-		<div class="modal fade" id="changingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="modificarModalLabel"></h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<form id="formCanciones">
-						<div class="modal-body" id="bodyModificaModal">
-                            
-                        </div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary fontBtn" data-dismiss="modal">Close</button>
-							<button type="submit" class="btn btn-primary fontBtn">Save changes</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
+    <div
+      class="modal fade"
+      id="changingModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modificarModalLabel"></h5>
+            
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
 
-        <script
-			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-			crossorigin="anonymous"
-		></script>
+          <form id="formCanciones">
+            <div class="modal-body" id="bodyModificaModal"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success fontBtn" data-bs-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn btn-success fontBtn">
+                Guardar cambios
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-			crossorigin="anonymous"
-		></script>
-<script src="/js/admin.js"></script>
-</body>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/admin.js"></script>
+  </body>
 </html>
-
