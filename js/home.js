@@ -1,33 +1,31 @@
 //si un usuario no se encuentra logeado
 
-let user = JSON.parse(localStorage.getItem("usuario")) 
+let user = JSON.parse(localStorage.getItem("usuario"))  || {};
 
-if(user.email === undefined) {
-    location.href = "login.html"
+if (user.email === undefined) {
+    location.href = "login.html";
 }
 
 //traigo el arreglo de canciones.
 
-let ... = JSON.parse(localStorage.getItem("...")) || [];
+let canciones = JSON.parse(localStorage.getItem("canciones")) || [];
 
 //variable donde voy a poner las cards
 
-
-let contenedor = document.querySelcetor("#...");
+let contenedor = document.querySelcetor("#container-cards");
 
 function cargarCard() {
-    .forEach( (...)=> {
-    div.classList = "col col-md-6 col-lg mb-3";
-    
-
+    canciones.forEach( (music)=> {
+    let div = document.createElement("div");
+    //div.classList = "col col-md-6 col-lg mb-3";
 
     div.innerHTML =`
     <div class="card">
                 <div class="cover-card">
-                    <img src="${.imagen}" alt="imagen">
+                    <img src="${cancion.imagen}" alt="imagen">
                 </div>
-                <h2>${.titulo}</h2>
-                <p class="interprete">${.interprete}</p>
+                <h2>${cancion.titulo}</h2>
+                <p class="interprete">${cancion.interprete}</p>
                 <small class=" text-ligth text-muted">5:49 min</small>
                 <hr>
                 <div class="footer-card">
@@ -36,9 +34,7 @@ function cargarCard() {
                 </div>
             </div>
     `;
-
     contenedor.appendChild(div);
-
     });
 }
 
