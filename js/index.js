@@ -1,3 +1,3 @@
 setTimeout(() => {
-    location.href = "/pages/404.html";
+    location.href = "/pages/login.html";
 }, "3000")

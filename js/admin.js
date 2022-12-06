@@ -2,30 +2,30 @@ const formCanciones = document.querySelector("#formCanciones");
 let nuevo;
 
 //tabla de usuarios
-// const user = JSON.parse(localStorage.getItem("usuario"));
+const user = JSON.parse(localStorage.getItem("usuario"));
 
-// if(user.id === 0401){
-//     const tablaUsuarios = document.querySelector("#tableUser");
-//     const usuarios = JSON.parse(localStorage.getItem("usuarios"));
+if(user.id === 257){
+    const tablaUsuarios = document.querySelector("#tableUser");
+    const usuarios = JSON.parse(localStorage.getItem("usuarios"));
 
-//     function cargarUsuariosTabla() {
-//         usuarios.forEach((user) => {
-//             let tr = document.createElement("tr");
+    function cargarUsuariosTabla() {
+        usuarios.forEach((user) => {
+            let tr = document.createElement("tr");
 
-//             tr.innerHTML = `
-//                 <th scope="row">${user.usuario}</th>
-//                 <td>${user.nombre}</td>
-//                 <td>${user.email}</td>
-//             `;
+            tr.innerHTML = `
+                <th scope="row">${user.usuario}</th>
+                <td>${user.nombre}</td>
+                <td>${user.email}</td>
+            `;
 
-//             tablaUsuarios.appendChild(tr);
-//         });
-//     }
+            tablaUsuarios.appendChild(tr);
+        });
+    }
 
-//     cargarUsuariosTabla();
-// }else{
-//     location.href = "/pages/home.html";
-// }
+    cargarUsuariosTabla();
+}else {
+    location.href = "/pages/home.html";
+}
 
 
 
