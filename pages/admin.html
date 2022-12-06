@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +12,18 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+<<<<<<< HEAD
     <link rel="stylesheet" href="/styles/styles.css" />
+=======
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/navbar.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous"/>
+>>>>>>> a9181a169fa4b0db13727c0e8c958e330960031b
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -20,8 +31,39 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-  </head>
-  <body>
+</head>
+<body>
+  <header>
+      <nav class="navbar navbar-expand-lg bg-secondary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <img src="/img/Logo.png" alt="Logo-menu-navegacion" class="navar-logo-rm">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Rolling-Music</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Iniciar Sesion</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Registrarse</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-secondary" style="background-color:#000000" type="submit">Buscar</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+  </header>
     <div class="container-xl" id="contenedor_principal">
       <div class="row">
         <div class="col mt-4">
@@ -122,19 +164,65 @@
         </div>
       </div>
     </div>
+  <footer class="text-black bg-secondary">
+      <div class="container text-center py-3">
+        <nav class="row align-items-center">
+          <div class="col-md">
+            <div><h5>¡Sigamos conectados!</h5></div>
+            <div>
+                <a href="https://www.facebook.com/"
+                style="text-decoration: none"
+                target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a>
+            </div>
+    
+            <div>
+                <a href="https://twitter.com/"
+                style="text-decoration: none"
+                target="_blank"
+                ><i class="fab fa-twitter-square"></i> Twitter</a>
+            </div>
+    
+            <div>
+                <a href="https://www.instagram.com/"
+                style="text-decoration: none"
+                target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+            <div>
+              <a href="https://www.youtube.com/"
+              style="text-decoration: none"
+              target="_blank">
+              <i class="fab fa-youtube"></i> YouTube</a>
+          </div>
+          </div>
+      
+          <div class="col-md d-none d-md-block">
+            <a href="#INICIO">
+              <img src="/img/Logo.png" alt="logo rollingmusic" height="56px"/></a>
+                </div>
+      
+          <div class="col-md d-none d-lg-block">
+            <div><h5>Contactanos</h5></div>
+            <div><i class="fas fa-envelope-square"></i>Rolling@music.com.ar</div>
+            <div><i class="fab fa-whatsapp-square"></i>+54 381 5867805</div>
+              
+          </div>
+        </nav>
+      </div>
+  </footer>
+  <script src="/js/navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
-
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
     ></script>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="/js/admin.js"></script>
-  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+  <script src="/js/admin.js"></script>
+</body>
 </html>
