@@ -1,7 +1,33 @@
 const formCanciones = document.querySelector("#formCanciones");
 let nuevo;
-//evito que cambiando url un usuario pueda ingresar a pagina de admin
-const user = JSON.parse(localStorage.getItem("usuario"));
+
+//tabla de usuarios
+// const user = JSON.parse(localStorage.getItem("usuario"));
+
+// if(user.id === 0401){
+//     const tablaUsuarios = document.querySelector("#tableUser");
+//     const usuarios = JSON.parse(localStorage.getItem("usuarios"));
+
+//     function cargarUsuariosTabla() {
+//         usuarios.forEach((user) => {
+//             let tr = document.createElement("tr");
+
+//             tr.innerHTML = `
+//                 <th scope="row">${user.usuario}</th>
+//                 <td>${user.nombre}</td>
+//                 <td>${user.email}</td>
+//             `;
+
+//             tablaUsuarios.appendChild(tr);
+//         });
+//     }
+
+//     cargarUsuariosTabla();
+// }else{
+//     location.href = "/pages/home.html";
+// }
+
+
 
 class Cancion {
     constructor(codigo, titulo, interprete, imagen) {
@@ -13,31 +39,16 @@ class Cancion {
     }
 }
 
-// if(user.id === 1234){
-//     const tablaUsuarios = document.querySelector("#tableUser");
+     
     const tablaCanciones = document.querySelector("#bodyTable");
     const myModal = document.querySelector("#changingModal");
     const content = document.querySelector("#bodyModificaModal");
-    //const usuarios = JSON.parse(localStorage.getItem("usuarios")); //usuarios es la key por lo que en el registro quien se encargue de armar el almacenamiento en el local storage debe guardar los usuarios con esta key
+ 
 
     let canciones = JSON.parse(localStorage.getItem("canciones")) || [];
 
     formCanciones.addEventListener("submit", cargarCanciones)
-    // function cargarUsuariosTabla(){
-    //     usuarios.map( () =>{
-    //         let tr = document.createElement("tr");
-
-    //         tr.innerHTML = `
-    //             <th scope="row">${user.usuario}</th>
-    //             <td>${user.nombre}</td>
-    //             <td>${user.email}</td>
-    //         `;
-
-    //         tablaUsuarios.appendChild(tr);
-    //     });
-    // }
-
-    // cargarUsuariosTabla();
+     
 
     function cargarTablaCanciones(){
         canciones.forEach((songs) => {
@@ -158,6 +169,3 @@ class Cancion {
 
         $(myModal).modal("show");
     }
-// }else{
-//     location.href = "home.html"
-// }
