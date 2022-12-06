@@ -22,14 +22,15 @@ function validarLogin(e){
             email: user.email,
         };
         
-        localStorage.setItem("usuario", JSON.stringify("usuario"));
+        localStorage.setItem("usuario", JSON.stringify(usuario));
 
     if(user.id === 257){
         location.href = "/pages/admin.html";
     } else{
         location.href = "/pages/home.html";
     }
-    } else {
-        console.log("usuario no valido")
-    }
+}else {
+    console.log("usuario no valido");
+}
+    
 }
