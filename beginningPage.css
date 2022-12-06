@@ -1,0 +1,29 @@
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+body {
+    background-color: rgba(14, 98, 14, 0.701);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.beginningPage img {
+    width: 25rem; 
+}
+
+.Paragraph {
+    color: rgba(255, 255, 255, 0.888);
+    text-shadow: 10px 0px 10px rgba(0, 0, 0, 0.799);
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+}
