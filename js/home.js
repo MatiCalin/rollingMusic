@@ -20,7 +20,7 @@ function cargarCard() {
     //div.classList = "col col-md-6 col-lg mb-3";
 
     div.innerHTML =`
-    <div class="card">
+    <div class="cardHome">
                 <div class="cover-card">
                     <img src="${cancion.imagen}" alt="imagen">
                 </div>
