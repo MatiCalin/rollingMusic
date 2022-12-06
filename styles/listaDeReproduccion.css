@@ -1,0 +1,36 @@
+.borrar-producto {
+	background-color: red;
+	border-radius: 50%;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+
+.submenu {
+	position: relative;
+}
+
+submenu #auriculares {
+	display: none;
+}
+
+.submenu:hover #auriculares {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 100%;
+	z-index: 1;
+	background-color: white;
+	padding: 20px;
+	min-height: 400px;
+	min-width: 300px;
+}
+
+.vacio {
+	padding: 10px;
+	background-color: crimson;
+	text-align: center;
+	border-radius: 10px;
+	color: white;
+}
