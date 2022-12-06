@@ -6,10 +6,6 @@
     box-sizing: border-box;
 }
 
-body{
-    background-image: url(/pages/assets/fondo.webp)
-}
-
 .container-all-cards{
     height: 100vh;
     
@@ -134,7 +130,7 @@ body{
 
     /* Modal */
 
-    .header{
+    .Cardheader{
         display: flex;
         height: 100vh;
         width: 100%;
@@ -149,7 +145,7 @@ body{
         border-radius: .4rem;
     }
 
-    .modal{
+    .modalHome{
         position: fixed;
         top: 0;
         bottom: 0;
@@ -167,7 +163,7 @@ body{
         transition: opacity .5s;
     }
 
-    .modal:target{
+    .modalHome:target{
         --opacity: 1;
         --pointer: unset;
     }
@@ -185,7 +181,7 @@ body{
         border-radius: 1em;
     }
 
-    .modal:target .modal-container{
+    .modalHome:target .modal-container{
         animation: show 1s .5s backwards;
     }
 
@@ -206,7 +202,7 @@ body{
         margin-bottom: 2em;
     }
 
-    .modal:target .modal-picture{
+    .modalHome:target .modal-picture{
         animation: scale .5s 1.5s;
     }
 
