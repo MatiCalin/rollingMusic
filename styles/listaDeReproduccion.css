@@ -1,3 +1,12 @@
+.fa-headphones {
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 60px;
+	background-size: 30px;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
 .borrar-producto {
 	background-color: red;
 	border-radius: 50%;
@@ -7,12 +16,24 @@
 	font-weight: bold;
 }
 
+
 .submenu {
-	position: relative;
+    background:  white;
+    position: relative;
+	right: 0;
+
+	margin: 8px;
+	padding: 10px;
+	min-height: 10px;
+	min-width: 10px;
+	
 }
 
-submenu #auriculares {
+
+.submenu #auriculares {
+    background: white;
 	display: none;
+    
 }
 
 .submenu:hover #auriculares {
@@ -34,3 +55,4 @@ submenu #auriculares {
 	border-radius: 10px;
 	color: white;
 }
+
