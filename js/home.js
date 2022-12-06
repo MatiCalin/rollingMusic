@@ -2,9 +2,9 @@
 
 let user = JSON.parse(localStorage.getItem("usuario"))  || {};
 
-if (user.email === undefined) {
-    location.href = "login.html";
-}
+// if (user.email === undefined) {
+//     location.href = "login.html";
+// }
 
 //traigo el arreglo de canciones.
 
@@ -12,10 +12,10 @@ let canciones = JSON.parse(localStorage.getItem("canciones")) || [];
 
 //variable donde voy a poner las cards
 
-let contenedor = document.querySelcetor("#container-cards");
+let contenedor = document.querySelector("#container-cards");
 
 function cargarCard() {
-    canciones.forEach( (music)=> {
+    canciones.forEach( (cancion)=> {
     let div = document.createElement("div");
     //div.classList = "col col-md-6 col-lg mb-3";
 
