@@ -9,6 +9,11 @@ body {
     
 }
 
+.searchNavbar form{
+    align-items: center;
+    justify-content:center ;
+}
+
 .navar-logo-rm {
     width: auto;
     height: 70px;

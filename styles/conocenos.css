@@ -1,21 +1,27 @@
-.texto{
-    background-color: #fff;
+.contenedor-total{
+    margin-top:  80px; 
 }
 
-.contenedor-total{
-    margin-top:  80px;
-  
+.intro {
+    color: rgb(255, 255, 255);
+    background-color: rgba(14, 98, 14, 0.695);
+    width: 50rem;
+    box-shadow: 10px 0px 10px rgb(0, 0, 0);
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
 }
 
 .container-card {
-    padding-bottom: 10px;
-    padding-top: 10px;
     display: flex;
     justify-content: center;
 }
   /* estilos de imagen de card */
 .card-img-top {
     object-fit: cover;
+    object-position: top;
     background-size: cover;
     max-height: 20rem;
 }
@@ -24,7 +30,12 @@
     border-radius: 10px;
     text-align: center;
 }
-.titulo{
-    color:  #1a2537; 
-    ;
+
+.card-body {
+    background-color: rgba(14, 98, 14, 0.695);
+}
+
+.card-body h5, p {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
 }
