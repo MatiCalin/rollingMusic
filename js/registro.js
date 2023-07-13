@@ -33,5 +33,9 @@ function validarUsuarios(e){
     let newUser = new Usuario(id, nombre, email, usuario, password)
     usuarios = [...usuarios, newUser];
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
-    formulario.reset()
+    setTimeout(() => {
+        formulario.reset()
+        location.href = "/pages/login.html" 
+    }, 3000);
+    
 }

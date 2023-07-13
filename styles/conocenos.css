@@ -2,6 +2,12 @@
     margin-top:  80px; 
 }
 
+.texto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .intro {
     color: rgb(255, 255, 255);
     background-color: rgba(14, 98, 14, 0.695);
@@ -10,7 +16,6 @@
     border-radius: 10px;
     font-weight: bold;
     font-size: 2rem;
-    text-align: center;
     padding: 1rem;
 }
 

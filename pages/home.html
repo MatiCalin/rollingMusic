@@ -13,7 +13,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
     crossorigin="anonymous"/>
-    <title>Document</title>
+    <title>Home</title>
 </head>
 <body>
   <header>
@@ -35,9 +35,9 @@
               </li>
             </ul>
             <div>
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                <button class="btn btn-outline-secondary" style="background-color:#000000" type="submit">Buscar</button>
+              <form class="d-flex" role="search" id="searchForm">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" id="searchBtnFilter">
+                <button class="btn btn-outline-secondary" style="background-color:#000000" type="submit" >Buscar</button>
               </form>
             </div>
             
@@ -48,41 +48,18 @@
         </div>
       </nav>
 </header>
-    <h1>Cards</h1>
+  
 
     <!-- CARD INICIO -->
 
-    <div class="container-all-cards">
+    <div class="container-all-cards mt-4">
         <div class="container-cards" id="container-cards">
             
         </div>
     </div>
     
 
-    <!-- MODAL INICIO -->
-
-
-    <header id="header" class="Cardheader">
-        <a href="#modal1" class="cta">fsdafdfsda</a>
-    </header>
-
-    <section id="modal1" class="modalHome">
-        <div class="modal-container">
-            <figure class="modal-picture">
-                <img src="#" class="modal-img" alt="">
-            </figure>
-
-            <h2 class="modal-title">
-                que es dios
-            </h2>
-
-            <p class="modal-paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque repellendus praesentium autem voluptatum aliquam repellat soluta. Beatae consequatur, praesentium nulla eveniet architecto deserunt minima necessitatibus fuga? Mollitia ipsum accusantium vitae?
-            </p>
-
-            <a href="#header" class="modal-close">cerrar</a>
-        </div>
-
-    </section>
+    
     <footer class="bg-dark text-light">
       <div class="container text-center py-3">
         <nav class="row align-items-center">
@@ -128,7 +105,6 @@
         </nav>
       </div>
   </footer>
-      <script src="/js/navbar.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 <script src="/js/home.js"></script>
 </body>

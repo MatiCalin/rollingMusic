@@ -1,10 +1,6 @@
 //si un usuario no se encuentra logeado
 
-let user = JSON.parse(localStorage.getItem("usuario"))  || {};
-
-// if (user.email === undefined) {
-//     location.href = "login.html";
-// }
+let user = JSON.parse(localStorage.getItem("usuario")) || {};
 
 //traigo el arreglo de canciones.
 
@@ -14,12 +10,15 @@ let canciones = JSON.parse(localStorage.getItem("canciones")) || [];
 
 let contenedor = document.querySelector("#container-cards");
 
-function cargarCard() {
-    canciones.forEach( (cancion)=> {
-    let div = document.createElement("div");
-    //div.classList = "col col-md-6 col-lg mb-3";
+const botonBuscar = document.querySelector("#searchForm");
+botonBuscar.addEventListener("submit", buscarProducto);
 
-    div.innerHTML =`
+function cargarCard() {
+  contenedor.innerHTML = "";
+  canciones.forEach((cancion) => {
+    let div = document.createElement("div");
+
+    div.innerHTML = `
     <div class="cardHome">
                 <div class="cover-card">
                     <img src="${cancion.imagen}" alt="imagen">
@@ -35,7 +34,26 @@ function cargarCard() {
             </div>
     `;
     contenedor.appendChild(div);
-    });
+  });
 }
 
 cargarCard();
+
+function buscarProducto(e) {
+  e.preventDefault();
+
+  canciones = JSON.parse(localStorage.getItem("canciones")) || [];
+
+  const textoFiltrado = document.querySelector("#searchBtnFilter").value;
+
+  if (textoFiltrado === "") {
+    cargarCard();
+  } else {
+    canciones = canciones.filter(
+      (cancion) =>
+        cancion.interprete.toLowerCase() === textoFiltrado.toLowerCase()
+    );
+  }
+
+  cargarCard();
+}
